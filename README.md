@@ -4,5 +4,7 @@
 **Tools used:**
 
 **Requests:** Python library used to make HTTP requests to the Pixela API.
+
 **Datetime:** Python module used to work with dates and times, necessary to record the date of each activity entry.
+
 **Api:** Pixela Api
