@@ -58,7 +58,7 @@ parameters={
 
 
 #TODO: ENVIANDO INFORMACION A NUESTRA GRAFICA
-graph_end_point=f'https://pixe.la/v1/users/{USERNAME}/graphs/{GRAPH_ID}'
+graph_creation_point=f'https://pixe.la/v1/users/{USERNAME}/graphs/{GRAPH_ID}'
 
 
 graph_headers={
@@ -76,14 +76,40 @@ today = today.replace('-', '')
 
 graph_parameters={
     "date":today,
-    "quantity":"2.25",
-    "optionalData":"{\"key\":\"value\"}"
+    # "date":'20240320',
+    "quantity":input('How many hours did you study today: '),
+    # "optionalData":"{\"key\":\"value\"}"
     }
 
 
 #post request para crear nuestra grafica
-response=requests.post(graph_end_point, json=graph_parameters, headers=graph_headers)
+# response=requests.post(graph_creation_point, json=graph_parameters, headers=graph_headers)
 
 
 # miramos la respuesta del servidor, para saber si fue exitosa o no nuestra peticion
+# print(response.text)
+
+
+#TODO: ACTUALIZANDO UN DATO DE MI GRAFICA
+# new_end_point=f'https://pixe.la/v1/users/{USERNAME}/graphs/{GRAPH_ID}/{today}'
+
+
+new_parameters={
+    "quantity":"0.5",
+    
+    }
+
+#post request para actrualizar un dato de la grafica
+# response=requests.put(new_end_point, json=new_parameters, headers=graph_headers)
+
+
+# miramos la respuesta del servidor, para saber si fue exitosa o no nuestra peticion
+# print(response.text)
+
+
+#TODO:BORRANDO UN DATO EN ESPECIFICO
+delete_end_point=f'https://pixe.la/v1/users/{USERNAME}/graphs/{GRAPH_ID}/20240401'
+
+
+response=requests.delete(delete_end_point, headers=graph_headers)
 print(response.text)
