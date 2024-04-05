@@ -7,7 +7,7 @@
 
 **Datetime:** Python module used to work with dates and times, necessary to record the date of each activity entry.
 
-**Api:** Pixela Api, it's a web service for tracking daily activities. It visualizes your data in a calendar heat map, similar to GitHub’s contribution graph.
+**Api:** Pixela Api, it's a web service for tracking daily activities. It visualizes your data in a calendar heat map, similar to GitHub’s contribution graph. (https://docs.pixe.la/entry/post-user)
 
 
 ![img](https://github.com/bardack134/Activity-Tracking-with-Pixela-API/assets/142977989/ee2b399d-bc4a-4edc-b49a-55d26ca51867)
